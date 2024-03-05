@@ -18,3 +18,5 @@ Feel free to modify this index page with your own awesome content!
 #### Declaracion de propiedad intelectual
 
 {% include ip-statements.xhtml %}
+
+test
