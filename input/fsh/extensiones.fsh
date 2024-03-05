@@ -201,16 +201,16 @@ Context: LocalizacionPresInstitucional
     * display 0..1 MS
     * system 0..1 MS
 //* cuarta extension
-* extension[clasUgrAPS] ^short = "Clasificación de Urgencia en APS"
-* extension[clasUgrAPS] ^definition = "Clasificación utilizada  para diferenciar a  los Servicios de Urgencia de la Atención Primaria de acuerdo al horario de atención. En el caso que el SAPU funcione en forma estacional se designa como 'Verano'"
-* extension[clasUgrAPS].url MS
-* extension[clasUgrAPS].value[x] only CodeableConcept
-* extension[clasUgrAPS].valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSNivelPrestador (required)
-    * display 0..1 MS
-    * system 0..1 MS
+//* extension[clasUgrAPS] ^short = "Clasificación de Urgencia en APS"
+//* extension[clasUgrAPS] ^definition = "Clasificación utilizada  para diferenciar a  los Servicios de Urgencia de la Atención Primaria de acuerdo al horario de atención. En el caso que el SAPU funcione en forma estacional se designa como 'Verano'"
+//* extension[clasUgrAPS].url MS
+//* extension[clasUgrAPS].value[x] only CodeableConcept
+//* extension[clasUgrAPS].valueCodeableConcept 1..1 MS
+//  * coding 1..1 MS
+//    * code 1..1 MS
+//    * code from VSNivelPrestador (required)
+//    * display 0..1 MS
+//    * system 0..1 MS
 
 Extension: ModalidadAte
 Id: ModalidadAte
