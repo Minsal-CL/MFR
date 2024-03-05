@@ -24,8 +24,8 @@ Description: "Prestador Administrativo definido para fines de requerimientos nor
 * identifier ^comment = "Este elemento permite ingresar dos identificadores, uno de tipo RUN y uno de otro tipo de identificador"
 
 
-* identifier[RUN] ^short = "Identificador destinado a determinar el número de RUN"
-* identifier[RUN] ^definition = "Corresponde al identificador (RUN) otorgado el Registro Civil de Chile"
+* identifier[run] ^short = "Identificador destinado a determinar el número de RUN"
+* identifier[run] ^definition = "Corresponde al identificador (RUN) otorgado el Registro Civil de Chile"
   * use 1..1 MS
   * use = #official
   * use ^short = "Se define el uso de este identificador"
@@ -50,8 +50,8 @@ Description: "Prestador Administrativo definido para fines de requerimientos nor
   * value ^definition = "Valor del RUN en la Cédula de Identidad entregada por el Registro Civil, en formato sin puntos y con guión para diferencia el dígito verificador"
 
 
-* identifier[OtrosID] ^short = "Identificador destinado a determinar otro tipo de identificador"
-* identifier[OtrosID] ^definition = "Corresponde a otro tipo de identificador"
+* identifier[otro] ^short = "Identificador destinado a determinar otro tipo de identificador"
+* identifier[otro] ^definition = "Corresponde a otro tipo de identificador"
   * use 1..1 MS
   * use = #secondary
   * use ^short = "Se define el uso de este identificador"
@@ -104,6 +104,8 @@ Description: "Prestador Administrativo definido para fines de requerimientos nor
 * address ^short = "Dirección según Guía Core-CL"
 * address ^definition = "Dirección según Guía Core-CL"
 * address MS
+
+//* extension cl-address contains http://hl7.org/fhir/StructureDefinition/geolocation named Geolocalizacion 0..1 MS
 
 
 

@@ -17,13 +17,13 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
 
 * obeys dependencia-org-inst-1
 
-* extension contains 
-  FechaFunciona named FechaFunciona 1..1 MS and
-  FechaCese named FechaCese 0..1 MS and
+* extension contains
+  PeriodoFuncionamiento named PeriodoFuncionamiento 1..1 MS and
   Pertenencia named Pertenencia 1..1 MS and
   TipoEstablecimiento named TipoEstablecimiento 1..1 MS and
   TipoPrestador named TipoPrestador 0..1 MS and
-  Certificacion named Certificacion 1..1 MS
+  Certificacion named Certificacion 1..1 MS and
+  CaracterizacionPrestador named CaracterizacionPrestador 1..1 MS
   
   
 // Slice para segregar el identificador nuevo del antiguo segun la 820

@@ -23,7 +23,16 @@ Description: "Segundo Apellido"
 * value[x] only string
 
 
-
+Extension: PeriodoFuncionamiento
+Id: PeriodoFuncionamiento
+Title: "Periodo Funcionamiento Establecimiento"
+Description: "Periodo Funcionamiento Establecimiento"
+* ^context.type = #element
+* ^context.expression = "Organization"
+* value[x] only Period
+* valuePeriod 1..1 MS
+  * start 1..1 MS
+  * end 0..1 MS                                             
 
 Extension: CodigoPais
 Id: CodigoPais

@@ -222,42 +222,6 @@ Description: "Códigos para procedimientos de certificación según Norma 820"
 
 * codes from system CSCertificacionInst
 
-CodeSystem:  CSAmbitoFuncionamiento
-Id: CSAmbitoFuncionamiento
-Title: "Códigos para ámbito de funcionamiento"
-Description: "Códigos para ámbito de funcionamiento según Norma 820"
-
-* ^caseSensitive = true
-* ^experimental = true //dependera del uso que le den al codesystem
-* ^version = "1.0.0"
-* ^status = #active
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* #1 "Establecimiento de Salud"
-* #2 "Establecimiento Medicina Legal"
-* #3 "Unidad de Atención"
-* #4 "Programa de Atención"
-
-ValueSet: VSAmbitoFuncionamiento
-Id: VSAmbitoFuncionamiento
-Title: "Códigos para ámbito de funcionamiento"
-Description: "Códigos para ámbito de funcionamiento según Norma 820"
-
-* ^version = "1.0.0"
-* ^status = #active
-* ^experimental = true
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CSAmbitoFuncionamiento
-
 CodeSystem:  CSTiposEstabPub
 Id: CSTiposEstabPub
 Title: "Códigos para tipos de establecimientos públicos"
@@ -381,41 +345,6 @@ Description: "Códigos para tipo de establecimiento de salud"
 * codes from system CSTiposEstabPubHosp
 * codes from system CSTiposEstabPubOtros
 
-CodeSystem:  CSEstadoFuncionamiento
-Id: CSEstadoFuncionamiento
-Title: "Códigos para estado de funcionamiento institución prestadora"
-Description: "Códigos para lo tipos de estados de funcionamiento según Norma 820"
-
-* ^caseSensitive = true
-* ^experimental = true //dependera del uso que le den al codesystem
-* ^version = "1.0.0"
-* ^status = #active
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* #VigenteOH "Vigente en operación habitual"
-* #VigenteOT "Vigente en operación Transitoria"
-* #CerradoT "Cerrado Temporal"
-* #CerradoD "Cerrado Definitivamente"
-
-ValueSet: VSEstadoFuncionamiento
-Id: VSEstadoFuncionamiento
-Title: "Códigos para estado de funcionamiento institución prestadora"
-Description: "Códigos para lo tipos de estados de funcionamiento según Norma 820"
-* ^version = "1.0.0"
-* ^status = #active
-* ^experimental = true
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CSEstadoFuncionamiento
-
 
 CodeSystem:  CSTipoIdentificadorDEIS
 Id: CSTipoIdentificadorDEIS
@@ -443,7 +372,7 @@ Description: "Códigos para lo tipos de identificadores según Norma 820, agrega
 
 ValueSet: VSTipoIdentificadorDEIS
 Id: VSTipoIdentificadorDEIS
-Title: "Códigos para tipops de identificadores 820 "
+Title: "Códigos para tipops de identificadores 820"
 Description: "Códigos para lo tipos de identificadores según Norma 820, agregando RNPI"
 * ^version = "1.0.0"
 * ^status = #active
@@ -493,4 +422,117 @@ Description: "Códigos para sexo biológico en Chile según tabla 820."
 
 * codes from system CSSexoBiologico
 
+ValueSet: VSEstadoFuncionamiento
+Id: VSEstadoFuncionamiento
+Title: "EstadoFuncionamiento"
+Description: "EstadoFuncionamiento"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
+* codes from system CSEstadoFuncionamiento
+
+CodeSystem: CSEstadoFuncionamiento
+Id: CSEstadoFuncionamiento
+Title: "EstadoFuncionamiento"
+Description: "EstadoFuncionamiento"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "Vigente en operación habitual"
+* #2 "Vigente en operación parcial"
+* #3 "Vigente en operación transitoria"
+* #4 "Cerrado temporal"
+* #5 "Cerrado definitivo"
+* #6 "Otro"
+
+ValueSet: VSDependenciaAdministrativa
+Id: VSDependenciaAdministrativa
+Title: "DependenciaAdministrativa"
+Description: "DependenciaAdministrativa"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSDependenciaAdministrativa
+
+CodeSystem: CSDependenciaAdministrativa
+Id: CSDependenciaAdministrativa
+Title: "DependenciaAdministrativa"
+Description: "DependenciaAdministrativa"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "Servicio de Salud"
+* #2 "Municipal"
+* #3 "Privado"
+* #4 "Corporación Municipal"
+* #5 "Organización No Gubernamental (ONG)"
+* #6 "Fuerzas Armadas de Orden y Seguridad"
+* #7 "Gendarmería"
+* #8 "Delegados"
+* #9 "SEREMI de Salud"
+* #10 "MINSAL"
+* #11 "Ministerio de Justicia"
+* #12 "Ministerio del Trabajo y Previsión Social"
+* #13 "Otra Institución"
+
+ValueSet: VSAmbitoFuncionamiento
+Id: VSAmbitoFuncionamiento
+Title: "AmbitoFuncionamiento"
+Description: "AmbitoFuncionamiento"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSAmbitoFuncionamiento
+
+CodeSystem: CSAmbitoFuncionamiento
+Id: CSAmbitoFuncionamiento
+Title: "AmbitoFuncionamiento"
+Description: "AmbitoFuncionamiento"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "Establecimiento de Salud"
+* #2 "Establecimiento No de Salud de Salud"
+* #3 "Establecimiento Medicina Legal"
+* #4 "Unidad de Atención"
+* #5 "Programa de Atención"
+* #6 "Otro"
