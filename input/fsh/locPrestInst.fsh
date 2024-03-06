@@ -4,6 +4,7 @@ Id: LocalizacionPresInstitucional
 Title: "Localización Prestador Institucional MINSAL"
 Description: "Localización asociada a Prestador Institucional definido para fines de requerimientos normativos y conjunto de datos deseables para el sector público de salud."
 
+
 * ^version = "0.1.0"
 * ^status = #active
 * ^date = "2024-01-29T12:00:00-04:00"
