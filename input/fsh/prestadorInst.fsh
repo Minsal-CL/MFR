@@ -1,5 +1,6 @@
 Profile: PrestadorInstitucionalMinsal
 Parent: OrganizacionCL
+Id: PrestadorInstitucionalMinsal
 Title: "Prestador Institucional MINSAL"
 Description: "Prestador Institucional definido para fines de requerimientos normativos y conjunto de datos deseables para el sector público de salud."
 

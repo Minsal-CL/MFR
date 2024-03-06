@@ -1,5 +1,6 @@
 Profile: LocalizacionPresInstitucional
 Parent: LocalizacionCL
+Id: LocalizacionPresInstitucional
 Title: "Localización Prestador Institucional MINSAL"
 Description: "Localización asociada a Prestador Institucional definido para fines de requerimientos normativos y conjunto de datos deseables para el sector público de salud."
 
