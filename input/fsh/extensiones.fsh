@@ -14,6 +14,8 @@ Description: "Esta extensión incluye códigos de paises de origen"
   * display 0..1 MS
 //* valueCodeableConcept.coding.system from CodPaises (extensible)
 
+
+
 Extension: SegundoApellido
 Id: SegundoApellido
 Title: "Segundo Apellido"
@@ -32,7 +34,9 @@ Description: "Periodo Funcionamiento Establecimiento"
 * value[x] only Period
 * valuePeriod 1..1 MS
   * start 1..1 MS
-  * end 0..1 MS                                             
+  * start ^short = "Fecha de inicio de funcionamiento de la organizacion"
+  * end 0..1 MS
+  * end ^short = "Fecha de término de funcionamiento de la organizacion"                                             
 
 Extension: CodigoPais
 Id: CodigoPais
@@ -43,46 +47,6 @@ Description: "Extensión para el código de identificación de país"
 * value[x] only CodeableConcept
 * value[x] ^short = "Código de identificación de país"
 * value[x] from https://hl7chile.cl/fhir/ig/clcore/ValueSet/CodPais (required)
-
-
-Extension: SexoNacimiento820
-Id: SexoNacimiento820
-Title: "Sexo biológico al nacer"
-Description: "Extensión de Sexdo biológico al nacer para Chile"
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only code
-* valueCode from VSSexoBiologico (required)
-* value[x] ^short = "Sexo biológico de  nacimiento"
-
-
-Extension: SexoReg
-Id: SexoReg
-Title: "Sexo Registral"
-Description: "Extensión para dato es de del sexo registrado oficialmente por el/la paciente"
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only code
-* valueCode from VSSexoBiologico (required)
-* value[x] ^short = "Sexo Registral" 
-
-Extension: FechaFunciona
-Id: FechaFunciona
-Title: "Fecha Cese Funcionamiento Institución"
-Description: "Corresponde al momento cronológico  que  inicio de funcionamiento de las actividades del prestador, dando cumplimiento a las exigencias sanitarias.  Es un dato expresado en formato de fecha."
-* ^context.type = #element
-* ^context.expression = "Organization"
-* value[x] only date
-* value[x] ^short = "Fecha inicio actividades" 
-
-Extension: FechaCese
-Id: FechaCese
-Title: "Fecha Cese Funcionamiento Institución"
-Description: "Corresponde al momento cronológico  que cierre de funcionamiento de las actividades del prestador, dando cumplimiento a las exigencias sanitarias.  Es un dato expresado en formato de fecha."
-* ^context.type = #element
-* ^context.expression = "Organization"
-* value[x] only date
-* value[x] ^short = "Fecha cese actividades" 
 
 
 Extension: EstadoFuncionamiento
@@ -99,6 +63,35 @@ Description: "Se refiere a la condición del establecimiento respecto a su funci
     * display 0..1 MS
     * system 0..1 MS
 
+
+Extension: DependenciaAdministrativa
+Id: DependenciaAdministrativa
+Title: "Dependencia Administrativa"
+Description: "Dependencia Administrativa"
+* ^context.type = #element
+* ^context.expression = "Organization"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSDependenciaAdministrativa (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+Extension: AmbitoFuncionamiento
+Id: AmbitoFuncionamiento
+Title: "Ambito Funcionamiento"
+Description: "Ambito Funcionamiento"
+* ^context.type = #element
+* ^context.expression = "Organization"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSAmbitoFuncionamiento (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
 Extension: NombreVia
 Id: NombreVia
 Title: "Nombre de la Vía"
@@ -108,9 +101,8 @@ Description: "Es la ubicación más específica de la dirección del establecimi
 * value[x] only string
 * value[x] ^short = "Nombre de la vía" 
 
-Extension: Pertenencia
-Id: Pertenencia
-Title: "Pertenencia al SNSS"
+Extension: PertenenciaSNSS
+Id: PertenenciaSNSS
 Description: "Es un atributo o características  del establecimiento relacionado con la relación de jurisdicción  establecida con el Sistema  Nacional de Servicios de Salud. Los establecimientos públicos  forman parte de un Servicio de Salud,  por lo tanto se consideran Pertenecientes al Sistema Nacional de Servicios de Salud. Por otro lado, Los establecimientos privados, de las Fuerzas Armadas, de Orden y Seguridad tienen una jurisdicción diferente, por lo tanto serán considerados  No pertenecientes al Sistema Nacional de Servicios de Salud."
 * ^context.type = #element
 * ^context.expression = "Organization"
@@ -159,58 +151,6 @@ Description: "Procedimiento mediante el cual, una tercera parte diferente e inde
     * display 0..1 MS
     * system 0..1 MS
 
-Extension:   CaracterizacionPrestador
-Id:          CaracterizacionPrestador
-Title:       "Caracterización del Prestador"
-Description: "Datos de Caracterización del Prestador existente en esta ubicación"
-Context: LocalizacionPresInstitucional
-* extension contains
-	nivAtencion 0..1 MS and
-	serUrg 1..1 MS and
-  tipoUrg 0..1 MS and
-  clasUgrAPS 0..1 MS
-* url MS
-
-//* Primera extension
-* extension[nivAtencion] ^short = "El sistema de salud está organizado en niveles de atención, según la cobertura y complejidad de las atenciones que entrega."
-* extension[nivAtencion] ^definition = "El sistema de salud está organizado en niveles de atención, según la cobertura y complejidad de las atenciones que entrega."
-* extension[nivAtencion].url MS
-* extension[nivAtencion].value[x] only CodeableConcept
-* extension[nivAtencion].valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSNivelPrestador (required)
-    * display 0..1 MS
-    * system 0..1 MS
-
-
-//* segunda extension
-* extension[serUrg] ^short = "Posee o no Servicio de Urgencia"
-* extension[serUrg].value[x] only boolean
-* extension[serUrg].url MS
-
-//* tercera extension
-* extension[tipoUrg] ^short = "Tipo de Urgencia del lugar"
-* extension[tipoUrg] ^definition = "Es dato que especifica el tipo de servicio de urgencia en la Red Asistencial."
-* extension[tipoUrg].url MS
-* extension[tipoUrg].value[x] only CodeableConcept
-* extension[tipoUrg].valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSNivelPrestador (required)
-    * display 0..1 MS
-    * system 0..1 MS
-//* cuarta extension
-//* extension[clasUgrAPS] ^short = "Clasificación de Urgencia en APS"
-//* extension[clasUgrAPS] ^definition = "Clasificación utilizada  para diferenciar a  los Servicios de Urgencia de la Atención Primaria de acuerdo al horario de atención. En el caso que el SAPU funcione en forma estacional se designa como 'Verano'"
-//* extension[clasUgrAPS].url MS
-//* extension[clasUgrAPS].value[x] only CodeableConcept
-//* extension[clasUgrAPS].valueCodeableConcept 1..1 MS
-//  * coding 1..1 MS
-//    * code 1..1 MS
-//    * code from VSNivelPrestador (required)
-//    * display 0..1 MS
-//    * system 0..1 MS
 
 Extension: ModalidadAte
 Id: ModalidadAte
@@ -225,3 +165,133 @@ Description: "Modalidad de atención respecto al proceso de atención de las per
     * code from VSModalidadAte (required)
     * display 0..1 MS
     * system 1..1 MS
+
+
+Extension: Seremi
+Id: Seremi
+Title: "SEREMI del cual depende la organizacion" 
+Description: "SEREMI del cual depende la organizacion"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSSeremi (required)
+    * display 0..1 MS
+    * system 1..1 MS
+
+Extension: ServiciosdeSalud
+Id: ServiciosdeSalud
+Title: "Servicio de Salud del cual depende la organizacion" 
+Description: "Servicio de Salud del cual depende la organizacion"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSServiciosdeSalud (required)
+    * display 0..1 MS
+    * system 1..1 MS
+
+Extension: SeremiSS
+Id: SeremiSS
+Title: "Seremi o SS al cual depende la organizacion" 
+Description: "Seremi o SS al cual depende la organizacion"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSSEREMISS (required)
+    * display 0..1 MS
+    * system 1..1 MS
+
+Extension: NivelAtencion
+Id: NivelAtencion
+Title: "Nivel Atencion"
+Description: "Nivel Atencion"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* url MS
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSNivelAtencion (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+Extension: TieneServicioUrgencia
+Id: TieneServicioUrgencia
+Title: "Tiene Servicio Urgencia"
+Description: "Tiene Servicio Urgencia"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* value[x] only boolean
+* url MS
+
+Extension: TipoUrgencia
+Id: TipoUrgencia
+Title: "Tipo Urgencia"
+Description: "Tipo Urgencia"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* url MS
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSTipoUrgencia (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+Extension: ClasificacionSAPU
+Id: ClasificacionSAPU
+Title: "Clasificacion SAPU"
+Description: "ClasificacionSAPU"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* url MS
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSClasificacionSapu (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+Extension: NivelComplejidadEstab
+Id: NivelComplejidadEstab
+Title: "Nivel Complejidad Establecimiento"
+Description: "Nivel Complejidad Establecimiento"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* url MS
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSNivelComplejidadEstab (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+Extension: ModalidadAtencionFonasa
+Id: ModalidadAtencionFonasa
+Title: "Modalidad Atencion Fonasa"
+Description: "Modalidad Atencion Fonasa"
+* ^context.type = #element
+* ^context.expression = "PrestadorInstitucionalMinsal"
+* url MS
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSModalidadAtencionFonasa (required)
+    * display 0..1 MS
+    * system 0..1 MS
+
+
+

@@ -19,7 +19,6 @@ Description: "Códigos para modalidad atención prestador según Norma 820"
 * #99 "No Aplica"
 
 
-
 ValueSet:   VSModalidadAte
 Id:  VSModalidadAte
 Title: "Códigos para modalidad atención prestador"
@@ -37,42 +36,6 @@ Description: "Códigos para modalidad atención prestador según Norma 820"
 * codes from system CSModalidadAte
 
 
-CodeSystem:  CSClasUrgAPS
-Id: CSClasUrgAPS
-Title: "Códigos para clasificación de urgencia en APS"
-Description: "Códigos para clasificación de urgencia en APS según Norma 820"
-
-* ^caseSensitive = true
-* ^experimental = true //dependera del uso que le den al codesystem
-* ^version = "1.0.0"
-* ^status = #active
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* #1 "Corto"
-* #2 "Largo"
-* #3 "Verano"
-* #98 "Otro"
-
-
-ValueSet:   VSClasUrgAPS
-Id:  VSClasUrgAPS
-Title: "Códigos para clasificación de urgencia en APS"
-Description: "Códigos para clasificación de urgencia en APS según Norma 820"
-
-* ^version = "1.0.0"
-* ^status = #active
-* ^experimental = true
-* ^date = "2024-01-29T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CSClasUrgAPS
 
 
 
@@ -113,10 +76,10 @@ Description: "Códigos para tipo de urgencia según Norma 820"
 * codes from system CSTipoUrgencia
 
 
-CodeSystem:  CSNivelPrestador
-Id: CSNivelPrestador
-Title: "Códigos para nivel del prestador"
-Description: "Códigos para nivel del prestador según Norma 820"
+CodeSystem:  CSNivelAtencion
+Id: CSNivelAtencion
+Title: "Códigos para nivel Atencion"
+Description: "Códigos para nivel de Atencion"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -134,10 +97,10 @@ Description: "Códigos para nivel del prestador según Norma 820"
 * #95 "No aplica"
 
 
-ValueSet:   VSNivelPrestador
-Id: VSNivelPrestador
-Title: "Códigos para nivel del prestador"
-Description: "Códigos para nivel del prestador según Norma 820"
+ValueSet:   VSNivelAtencion
+Id: VSNivelAtencion
+Title: "Códigos para nivel de Atencion"
+Description: "Códigos para nivel de Atencion"
 
 * ^version = "1.0.0"
 * ^status = #active
@@ -148,7 +111,7 @@ Description: "Códigos para nivel del prestador según Norma 820"
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSNivelPrestador
+* codes from system CSNivelAtencion
 
 
 CodeSystem:  CSTipoPrestador
@@ -189,7 +152,7 @@ Description: "Códigos para lo tipos de prestadores según Norma 820"
 
 CodeSystem:  CSCertificacionInst
 Id: CSCertificacionInst
-Title: "Códigos paa procedimientos de certificación"
+Title: "Códigos praa procedimientos de certificación"
 Description: "Códigos para procedimientos de certificación según Norma 820"
 
 * ^caseSensitive = true
@@ -205,7 +168,7 @@ Description: "Códigos para procedimientos de certificación según Norma 820"
 * #1 "Modelo de Salud Familiar Integral (CESFAM)"
 * #2 "Autogestionados"
 * #3 "No Aplica"
-* #4 "Invitados para ser autogestionados"
+* #95 "Invitados para ser autogestionados"
 
 ValueSet:  VSCertificacionInst
 Id: VSCertificacionInst
@@ -339,7 +302,6 @@ Description: "Códigos para tipo de establecimiento de salud"
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSTiposEstabPub
 * codes from system CSTiposEstabPubAPS
 * codes from system CSTiposEstabPubEsp
 * codes from system CSTiposEstabPubHosp
@@ -536,3 +498,229 @@ Description: "AmbitoFuncionamiento"
 * #4 "Unidad de Atención"
 * #5 "Programa de Atención"
 * #6 "Otro"
+
+ValueSet: VSSeremi
+Id: VSSeremi
+Title: "SEREMI"
+Description: "SEREMI"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSSeremi
+
+CodeSystem: CSSeremi
+Id: CSSEREMI
+Title: "SEREMI"
+Description: "SEREMI"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1	"SEREMI De Tarapacá"
+* #2	"SEREMI De Antofagasta"
+* #3	"SEREMI De Atacama"
+* #4	"SEREMI De Coquimbo"
+* #5	"SEREMI De Valparaíso"
+* #6	"SEREMI Del Libertador Gral. B. O'Higgins"
+* #7	"SEREMI Del Maule"
+* #8	"SEREMI Del Biobío"
+* #9	"SEREMI De La Araucanía"
+* #10	"SEREMI De Los Lagos"
+* #11	"SEREMI De Aisén del General Carlos Ibáñez del Campo"
+* #12	"SEREMI De Magallanes y la Antártica Chilena"
+* #13	"SEREMI Metropolitana de Santiago"
+* #14	"SEREMI De Los Ríos"
+* #15	"SEREMI De Arica y Parinacota"
+* #16	"SEREMI Del Ñuble"
+
+ValueSet: VSServiciosdeSalud
+Id: VSServiciosdeSalud
+Title: "ServiciosdeSalud"
+Description: "ServiciosdeSalud"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSServiciosdeSalud
+
+CodeSystem: CSServiciosdeSalud
+Id: CSServiciosdeSalud
+Title: "ServiciosdeSalud"
+Description: "ServiciosdeSalud"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1	"Servicio de Salud Arica y Parinacota"
+* #2	"Servicio de Salud Tarapacá"
+* #3	"Servicio de Salud Antofagasta"
+* #4	"Servicio de Salud Atacama"
+* #5	"Servicio de Salud Coquimbo"
+* #6	"Servicio de Salud Valparaíso San Antonio"
+* #7	"Servicio de Salud Viña del Mar Quillota"
+* #8	"Servicio de Salud Aconcagua"
+* #9	"Servicio de Salud Metropolitano Norte"
+* #10	"Servicio de Salud Metropolitano Occidente"
+* #11	"Servicio de Salud Metropolitano Central"
+* #12	"Servicio de Salud Metropolitano Oriente"
+* #13	"Servicio de Salud Metropolitano Sur"
+* #14	"Servicio de Salud Metropolitano Sur Oriente"
+* #15	"Servicio de Salud Del Libertador B. O’Higgins"
+* #16	"Servicio de Salud Del Maule"
+* #17	"Servicio de Salud Ñuble"
+* #18	"Servicio de Salud Concepción"
+* #19	"Servicio de Salud Talcahuano"
+* #20	"Servicio de Salud Biobío"
+* #21	"Servicio de Salud Araucanía Sur"
+* #22	"Servicio de Salud Los Ríos"
+* #23	"Servicio de Salud Osorno"
+* #24	"Servicio de Salud Del Reloncaví"
+* #25	"Servicio de Salud Aisén"
+* #26	"Servicio de Salud Magallanes"
+* #28	"Servicio de Salud Arauco"
+* #29	"Servicio de Salud Araucanía Norte"
+* #33	"Servicio de Salud Chiloé"
+* #95	"Hospital  Digital"
+
+ValueSet: VSSEREMISS
+Id: VSSEREMISS
+Title: "SEREMISS"
+Description: "SEREMISS"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSServiciosdeSalud
+* codes from system CSSEREMI
+
+
+ValueSet: VSClasificacionSapu
+Id: VSClasificacionSapu
+Title: "ClasificacionSapu"
+Description: "ClasificacionSapu"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSClasificacionSapu
+
+CodeSystem: CSClasificacionSapu
+Id: CSClasificacionSapu
+Title: "ClasificacionSapu"
+Description: "ClasificacionSapu"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "Avanzado"
+* #2 "Corto"
+* #3 "Largo"
+* #4 "Verano"
+* #5 "Pendiente"
+* #95 "No Aplica"
+
+ValueSet: VSNivelComplejidadEstab
+Id: VSNivelComplejidadEstab
+Title: "NivelComplejidadEstab"
+Description: "NivelComplejidadEstab"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSNivelComplejidadEstab
+
+CodeSystem: CSNivelComplejidadEstab
+Id: CSNivelComplejidadEstab
+Title: "NivelComplejidadEstab"
+Description: "NivelComplejidadEstab"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "Baja Complejidad"
+* #2 "Mediana Complejidad"
+* #3 "Alta Complejidad"
+* #95 "No Aplica"
+
+
+ValueSet: VSModalidadAtencionFonasa
+Id: VSModalidadAtencionFonasa
+Title: "ModalidadAtencionFonasa"
+Description: "ModalidadAtencionFonasa"
+* ^experimental = false
+* ^version = "0.1"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from system CSModalidadAtencionFonasa
+
+CodeSystem: CSModalidadAtencionFonasa
+Id: CSModalidadAtencionFonasa
+Title: "ModalidadAtencionFonasa"
+Description: "ModalidadAtencionFonasa"
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.9"
+* ^status = #active
+* ^date = "2023-01-15"
+* ^contact.name = "MINSAL CHILE"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "minsal@minsal.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* #1 "MAI Modalidad de Atención Institucional"
+* #2 "MLE Modalidad de Atención Libre Elección"

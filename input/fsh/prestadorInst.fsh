@@ -20,11 +20,20 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
 
 * extension contains
   PeriodoFuncionamiento named PeriodoFuncionamiento 1..1 MS and
-  Pertenencia named Pertenencia 1..1 MS and
+  PertenenciaSNSS named PertenenciaSNSS 1..1 MS and
   TipoEstablecimiento named TipoEstablecimiento 1..1 MS and
   TipoPrestador named TipoPrestador 0..1 MS and
   Certificacion named Certificacion 1..1 MS and
-  CaracterizacionPrestador named CaracterizacionPrestador 1..1 MS
+  TipoUrgencia named TipoUrgencia 0..1 MS and
+  TieneServicioUrgencia named TieneServicioUrgencia 0..1 MS and
+  NivelAtencion named NivelAtencion 0..1 MS and  
+  EstadoFuncionamiento named EstadoFuncionamiento 1..1 MS and
+  DependenciaAdministrativa named DependenciaAdministrativa 1..1 MS and
+  AmbitoFuncionamiento named AmbitoFuncionamiento 1..1 MS and
+  Seremi named Seremi 0..1 MS and
+  ServiciosdeSalud named ServiciosdeSalud 0..1 MS and
+  SeremiSS named SeremiSS 1..1 MS
+
   
   
 // Slice para segregar el identificador nuevo del antiguo segun la 820
@@ -43,47 +52,44 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
     * ^short = "Uso del identificador usual | official | temp | secondary | old (If known)"
   * use from http://hl7.org/fhir/ValueSet/identifier-use
   * system ^short = "Namespace para el valor del identificador"
-  * value ^short = "Valor del identificador, correspondiente al Código Madre"
+  * value ^short = "Valor del identificador, correspondiente al Código Antiguo"
+  * value 1..1 MS
+
 
 * identifier[vigente] ^short = "Corresponde al identificador nuevo del establecimiento que integra en su estructura y funcionamiento otro establecimiento de menor complejidad  y es parte de su jurisdicción."
   * use = #official
     * ^short = "Uso del identificador usual | official | temp | secondary | old (If known)"
   * use from http://hl7.org/fhir/ValueSet/identifier-use
   * system ^short = "Namespace para el valor del identificador"
-  * value ^short = "Valor del identificador correspondiente al Código Madre Nuevo"
-
+  * value ^short = "Valor del identificador correspondiente al Código Vigente"
+  * value 1..1 MS
 * type 1..1 MS
 * type from VSAmbitoFuncionamiento
   * ^short = "Ámbito de funcionamiento del establecimiento" 
 
 * name 1..1 MS
-  * ^short = "Es la unidad político – administrativa de mayor nivel en que está dividido el país. La división político administrativa que actualmente rige en el país, se originó en 1974 y ha sido objeto de sucesivas modificaciones, la última de las cuales fue la Ley N° 21.033, que creó la Región de Ñuble. Por ello, a partir del 4 de septiembre de 2018, el país está dividido en 16 regiones."
+  * ^short = "Nombre Oficial del Establecimiento"
 
-* address 1..1 MS
-  * line 1..1 MS
-  * city 1..1 MS 
-  * district 1..1 MS 
-  * state 1..1 MS
-  * country 1..1 MS
-  * extension contains NombreVia named NombreVia 1..1 MS
+* address only ClAddressMFR
 
+//* address.extension.[Geolocalizacion].latitude MS
 * telecom 0..1 MS
-  * ^short = "Un número de teléfono es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una Red Telefónica Conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada."
+  * ^short = "Un número de teléfono es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una Red Telefónica Conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada."
   * system = #phone
   * value 1..1 MS
 
-// esto implicaría terner que armar un organization por cada SS y Seremi esto de abordo en base a id, lo que implicaría tener que armar el namespace para los id de SS o Seremi
-// este es obligatorio pero podria no tener dependencia si es Fuerza armada o privado.. conviene mejor armar una regla
 * partOf 0..1 MS
-  * ^short = "Es un identificador único para el Servicio de Salud y para la SEREMI, independiente que puedan tener coincidencia en el valor."
-  * identifier 1..1 MS
-    * ^short = "Identificador de Servicio de Salud y Seremi"
+  * ^short = "Dependencia Jerarquica."
+  * identifier 1..1 MS    
   * reference 0..1 MS
   * display 1..1 MS
-    * ^short = "Corresponde al nombre de organización de la dependencia que tiene el establecimiento sobre un nivel jerárquico superior. Esta compuesta por los Servicios de Salud y las SEREMI's"
+    * ^short = "Corresponde al nombre de organización de la dependencia que tiene el establecimiento sobre un nivel jerárquico superior."
+
 
 
 Invariant: dependencia-org-inst-1
 Description: "Si la 'Pertenencia' es 'true' entonces Debe existir un 'partOf'"
 Expression: "extension('Pertenencia').value = 'true' implies partOf.exists()"
 Severity: #error
+
+
