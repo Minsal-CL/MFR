@@ -123,8 +123,8 @@ Description: "Modalidad de atención respecto al proceso de atención de las per
 
 Extension: Dependencia
 Id: Dependencia
-Title: "Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)"
-Description: "Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)"
+Title: "Dependencia Jerárquica (SEREMI / Servicio de Salud)"
+Description: "Dependencia Jerárquica (SEREMI / Servicio de Salud)"
 * ^context.type = #element
 * ^context.expression = "PrestadorInstitucionalMinsal"
 * value[x] only CodeableConcept

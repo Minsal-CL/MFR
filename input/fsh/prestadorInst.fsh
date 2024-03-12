@@ -30,7 +30,7 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
   EstadoFuncionamiento named EstadoFuncionamiento 1..1 MS and
   DependenciaAdministrativa named DependenciaAdministrativa 1..1 MS and
   AmbitoFuncionamiento named AmbitoFuncionamiento 1..1 MS and
-  Dependencia named SeremiSS 1..1 MS
+  Dependencia named Dependencia 1..1 MS
 
   
   
