@@ -30,9 +30,7 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
   EstadoFuncionamiento named EstadoFuncionamiento 1..1 MS and
   DependenciaAdministrativa named DependenciaAdministrativa 1..1 MS and
   AmbitoFuncionamiento named AmbitoFuncionamiento 1..1 MS and
-  Seremi named Seremi 0..1 MS and
-  ServiciosdeSalud named ServiciosdeSalud 0..1 MS and
-  SeremiSS named SeremiSS 1..1 MS
+  Dependencia named SeremiSS 1..1 MS
 
   
   
@@ -70,7 +68,11 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
 * name 1..1 MS
   * ^short = "Nombre Oficial del Establecimiento"
 
-* address only ClAddressMFR
+//* address only ClAddressMFR
+* address only Address or ClAddressMFR
+* address 0..1 MS
+
+
 
 //* address.extension.[Geolocalizacion].latitude MS
 * telecom 0..1 MS
@@ -79,7 +81,7 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
   * value 1..1 MS
 
 * partOf 0..1 MS
-  * ^short = "Dependencia Jerarquica."
+  * ^short = "Código madre"
   * identifier 1..1 MS    
   * reference 0..1 MS
   * display 1..1 MS

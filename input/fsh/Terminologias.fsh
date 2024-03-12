@@ -1,7 +1,7 @@
 CodeSystem:  CSModalidadAte
 Id: CSModalidadAte
-Title: "Códigos para modalidad atención prestador"
-Description: "Códigos para modalidad atención prestador según Norma 820"
+Title: "Modalidad atención prestador"
+Description: "Modalidad atención"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -21,8 +21,8 @@ Description: "Códigos para modalidad atención prestador según Norma 820"
 
 ValueSet:   VSModalidadAte
 Id:  VSModalidadAte
-Title: "Códigos para modalidad atención prestador"
-Description: "Códigos para modalidad atención prestador según Norma 820"
+Title: "Modalidad atención prestador"
+Description: "Modalidad atención prestador"
 
 * ^version = "1.0.0"
 * ^status = #active
@@ -35,14 +35,10 @@ Description: "Códigos para modalidad atención prestador según Norma 820"
 
 * codes from system CSModalidadAte
 
-
-
-
-
 CodeSystem:  CSTipoUrgencia
 Id: CSTipoUrgencia
-Title: "Códigos para tipo de urgencia"
-Description: "Códigos para tipo de urgencia según Norma 820"
+Title: "Tipo de urgencia"
+Description: "Tipo de urgencia"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -58,11 +54,10 @@ Description: "Códigos para tipo de urgencia según Norma 820"
 * #2 "Hospitalaria"
 * #3 "Especializada"
 
-
 ValueSet:   VSTipoUrgencia
 Id: VSTipoUrgencia
-Title: "Códigos para tipo de urgencia"
-Description: "Códigos para tipo de urgencia según Norma 820"
+Title: "Tipo de urgencia"
+Description: "Tipo de urgencia"
 
 * ^version = "1.0.0"
 * ^status = #active
@@ -78,8 +73,8 @@ Description: "Códigos para tipo de urgencia según Norma 820"
 
 CodeSystem:  CSNivelAtencion
 Id: CSNivelAtencion
-Title: "Códigos para nivel Atencion"
-Description: "Códigos para nivel de Atencion"
+Title: "Nivel Atencion"
+Description: "Nivel de Atencion"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -99,8 +94,8 @@ Description: "Códigos para nivel de Atencion"
 
 ValueSet:   VSNivelAtencion
 Id: VSNivelAtencion
-Title: "Códigos para nivel de Atencion"
-Description: "Códigos para nivel de Atencion"
+Title: "Nivel de Atencion"
+Description: "Nivel de Atencion"
 
 * ^version = "1.0.0"
 * ^status = #active
@@ -116,8 +111,8 @@ Description: "Códigos para nivel de Atencion"
 
 CodeSystem:  CSTipoPrestador
 Id: CSTiposPrestador
-Title: "Códigos para tipos de prestadores"
-Description: "Códigos para lo tipos de prestadores según Norma 820"
+Title: "Tipos de prestadores"
+Description: "Tipos de prestadores"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -136,8 +131,8 @@ Description: "Códigos para lo tipos de prestadores según Norma 820"
 
 ValueSet:  VSTipoPrestador
 Id: VSTiposPrestador
-Title: "Códigos para tipos de prestadores"
-Description: "Códigos para lo tipos de prestadores según Norma 820"
+Title: "Tipos de prestadores"
+Description: "Tipos de prestadores"
 
 * ^version = "1.0.0"
 * ^status = #active
@@ -152,8 +147,8 @@ Description: "Códigos para lo tipos de prestadores según Norma 820"
 
 CodeSystem:  CSCertificacionInst
 Id: CSCertificacionInst
-Title: "Códigos praa procedimientos de certificación"
-Description: "Códigos para procedimientos de certificación según Norma 820"
+Title: "Procedimientos de certificación"
+Description: "Procedimientos de certificación"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -172,8 +167,8 @@ Description: "Códigos para procedimientos de certificación según Norma 820"
 
 ValueSet:  VSCertificacionInst
 Id: VSCertificacionInst
-Title: "Códigos paa procedimientos de certificación"
-Description: "Códigos para procedimientos de certificación según Norma 820"
+Title: "Procedimientos de certificación"
+Description: "Procedimientos de certificación"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
@@ -187,8 +182,8 @@ Description: "Códigos para procedimientos de certificación según Norma 820"
 
 CodeSystem:  CSTiposEstabPub
 Id: CSTiposEstabPub
-Title: "Códigos para tipos de establecimientos públicos"
-Description: "Códigos para lo tipos de establecimientos públicos según Norma 820"
+Title: "Tipos de establecimientos públicos"
+Description: "Tipos de establecimientos públicos"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -207,8 +202,8 @@ Description: "Códigos para lo tipos de establecimientos públicos según Norma 
 
 CodeSystem:  CSTiposEstabPubAPS
 Id: CSTiposEstabPubAPS
-Title: "Códigos para tipos de establecimientos públicos en APS"
-Description: "Códigos para lo tipos de establecimientos públicos en APS según Norma 820"
+Title: "Tipos de establecimientos públicos en APS"
+Description: "Tipos de establecimientos públicos en APS"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -228,8 +223,8 @@ Description: "Códigos para lo tipos de establecimientos públicos en APS según
 
 CodeSystem:  CSTiposEstabPubEsp
 Id: CSTiposEstabPubEsp
-Title: "Códigos para tipos de establecimientos públicos Especialidades"
-Description: "Códigos para lo tipos de establecimientos públicos Especialidades según Norma 820"
+Title: "Tipos de establecimientos públicos Especialidades"
+Description: "Tipos de establecimientos públicos Especialidades"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -248,8 +243,8 @@ Description: "Códigos para lo tipos de establecimientos públicos Especialidade
 
 CodeSystem:  CSTiposEstabPubHosp
 Id: CSTiposEstabPubHosp
-Title: "Códigos para tipos de establecimientos públicos Hospitales"
-Description: "Códigos para lo tipos de establecimientos públicos Hospitales según Norma 820"
+Title: "Tipos de establecimientos públicos Hospitales"
+Description: "Tipos de establecimientos públicos Hospitales"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -266,8 +261,8 @@ Description: "Códigos para lo tipos de establecimientos públicos Hospitales se
 
 CodeSystem:  CSTiposEstabPubOtros
 Id: CSTiposEstabPubOtros
-Title: "Códigos para tipos de establecimientos públicos categoría otros"
-Description: "Códigos para lo tipos de establecimientos públicos categoría otros según Norma 820"
+Title: "Tipos de establecimientos públicos \"otros\""
+Description: "Tipos de establecimientos públicos \"otros\" "
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -291,8 +286,8 @@ Description: "Códigos para lo tipos de establecimientos públicos categoría ot
 
 ValueSet: VSTipoEstablecimiento
 Id: VSTipoEstablecimiento
-Title: "Códigos para tipo de establecimiento de salud"
-Description: "Códigos para tipo de establecimiento de salud"
+Title: "Tipos de establecimiento de salud"
+Description: "Tipo de establecimiento de salud"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
@@ -310,8 +305,8 @@ Description: "Códigos para tipo de establecimiento de salud"
 
 CodeSystem:  CSTipoIdentificadorDEIS
 Id: CSTipoIdentificadorDEIS
-Title: "Códigos para tipops de identificadores 820"
-Description: "Códigos para lo tipos de identificadores según Norma 820, agregando RNPI"
+Title: "Códigos para tipops de identificadores"
+Description: "Códigos para lo tipos de identificadores"
 
 * ^caseSensitive = true
 * ^experimental = true //dependera del uso que le den al codesystem
@@ -334,8 +329,8 @@ Description: "Códigos para lo tipos de identificadores según Norma 820, agrega
 
 ValueSet: VSTipoIdentificadorDEIS
 Id: VSTipoIdentificadorDEIS
-Title: "Códigos para tipops de identificadores 820"
-Description: "Códigos para lo tipos de identificadores según Norma 820, agregando RNPI"
+Title: "Códigos para tipops de identificadores"
+Description: "Códigos para lo tipos de identificadores"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
@@ -372,7 +367,7 @@ Description: "Codigos definidos para el sexo de nacimiento de un paciente en Chi
 ValueSet: VSSexoBiologico
 Id: VSSexoBiologico
 Title: "Códigos para sexo biológico en Chile"
-Description: "Códigos para sexo biológico en Chile según tabla 820."
+Description: "Códigos para sexo biológico en Chile"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
@@ -386,8 +381,8 @@ Description: "Códigos para sexo biológico en Chile según tabla 820."
 
 ValueSet: VSEstadoFuncionamiento
 Id: VSEstadoFuncionamiento
-Title: "EstadoFuncionamiento"
-Description: "EstadoFuncionamiento"
+Title: "Estado Funcionamiento"
+Description: "Estado Funcionamiento"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -401,8 +396,8 @@ Description: "EstadoFuncionamiento"
 
 CodeSystem: CSEstadoFuncionamiento
 Id: CSEstadoFuncionamiento
-Title: "EstadoFuncionamiento"
-Description: "EstadoFuncionamiento"
+Title: "Estado Funcionamiento"
+Description: "Estado Funcionamiento"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -422,8 +417,8 @@ Description: "EstadoFuncionamiento"
 
 ValueSet: VSDependenciaAdministrativa
 Id: VSDependenciaAdministrativa
-Title: "DependenciaAdministrativa"
-Description: "DependenciaAdministrativa"
+Title: "Dependencia Administrativa"
+Description: "Dependencia Administrativa"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -437,8 +432,8 @@ Description: "DependenciaAdministrativa"
 
 CodeSystem: CSDependenciaAdministrativa
 Id: CSDependenciaAdministrativa
-Title: "DependenciaAdministrativa"
-Description: "DependenciaAdministrativa"
+Title: "Dependencia Administrativa"
+Description: "Dependencia Administrativa"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -465,8 +460,8 @@ Description: "DependenciaAdministrativa"
 
 ValueSet: VSAmbitoFuncionamiento
 Id: VSAmbitoFuncionamiento
-Title: "AmbitoFuncionamiento"
-Description: "AmbitoFuncionamiento"
+Title: "Ambito Funcionamiento"
+Description: "Ambito Funcionamiento"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -480,8 +475,8 @@ Description: "AmbitoFuncionamiento"
 
 CodeSystem: CSAmbitoFuncionamiento
 Id: CSAmbitoFuncionamiento
-Title: "AmbitoFuncionamiento"
-Description: "AmbitoFuncionamiento"
+Title: "Ambito Funcionamiento"
+Description: "Ambito Funcionamiento"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -499,25 +494,10 @@ Description: "AmbitoFuncionamiento"
 * #5 "Programa de Atención"
 * #6 "Otro"
 
-ValueSet: VSSeremi
-Id: VSSeremi
-Title: "SEREMI"
-Description: "SEREMI"
-* ^experimental = false
-* ^version = "0.1"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CSSeremi
-
 CodeSystem: CSSeremi
 Id: CSSEREMI
-Title: "SEREMI"
-Description: "SEREMI"
+Title: "SEREMIs"
+Description: "SEREMIs"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -545,25 +525,10 @@ Description: "SEREMI"
 * #15	"SEREMI De Arica y Parinacota"
 * #16	"SEREMI Del Ñuble"
 
-ValueSet: VSServiciosdeSalud
-Id: VSServiciosdeSalud
-Title: "ServiciosdeSalud"
-Description: "ServiciosdeSalud"
-* ^experimental = false
-* ^version = "0.1"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CSServiciosdeSalud
-
 CodeSystem: CSServiciosdeSalud
 Id: CSServiciosdeSalud
-Title: "ServiciosdeSalud"
-Description: "ServiciosdeSalud"
+Title: "Servicios de Salud"
+Description: "Servicios de Salud"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -605,10 +570,10 @@ Description: "ServiciosdeSalud"
 * #33	"Servicio de Salud Chiloé"
 * #95	"Hospital  Digital"
 
-ValueSet: VSSEREMISS
-Id: VSSEREMISS
-Title: "SEREMISS"
-Description: "SEREMISS"
+ValueSet: VSSeremiServiciosdeSalud
+Id: VSSeremiServiciosdeSalud
+Title: "Códigos Seremi/ServiciosdeSalud"
+Description: "Códigos Seremi/ServiciosdeSalud"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -624,8 +589,8 @@ Description: "SEREMISS"
 
 ValueSet: VSClasificacionSapu
 Id: VSClasificacionSapu
-Title: "ClasificacionSapu"
-Description: "ClasificacionSapu"
+Title: "Clasificacion SAPU"
+Description: "Clasificacion SAPU"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -639,8 +604,8 @@ Description: "ClasificacionSapu"
 
 CodeSystem: CSClasificacionSapu
 Id: CSClasificacionSapu
-Title: "ClasificacionSapu"
-Description: "ClasificacionSapu"
+Title: "Clasificacion SAPU"
+Description: "Clasificacion SAPU"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -660,8 +625,8 @@ Description: "ClasificacionSapu"
 
 ValueSet: VSNivelComplejidadEstab
 Id: VSNivelComplejidadEstab
-Title: "NivelComplejidadEstab"
-Description: "NivelComplejidadEstab"
+Title: "Nivel Complejidad Establecimiento"
+Description: "Nivel Complejidad Establecimiento"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -675,8 +640,8 @@ Description: "NivelComplejidadEstab"
 
 CodeSystem: CSNivelComplejidadEstab
 Id: CSNivelComplejidadEstab
-Title: "NivelComplejidadEstab"
-Description: "NivelComplejidadEstab"
+Title: "Nivel Complejidad Establecimiento"
+Description: "Nivel Complejidad Establecimiento"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -695,8 +660,8 @@ Description: "NivelComplejidadEstab"
 
 ValueSet: VSModalidadAtencionFonasa
 Id: VSModalidadAtencionFonasa
-Title: "ModalidadAtencionFonasa"
-Description: "ModalidadAtencionFonasa"
+Title: "Modalidad Atencion Fonasa"
+Description: "Modalidad Atencion Fonasa"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -710,8 +675,8 @@ Description: "ModalidadAtencionFonasa"
 
 CodeSystem: CSModalidadAtencionFonasa
 Id: CSModalidadAtencionFonasa
-Title: "ModalidadAtencionFonasa"
-Description: "ModalidadAtencionFonasa"
+Title: "Modalidad Atencion Fonasa"
+Description: "Modalidad Atencion Fonasa"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"

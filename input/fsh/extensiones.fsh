@@ -1,30 +1,3 @@
-Extension:   PaisOrigenNacionalidadCl
-Id:          CodigoPaises
-Title:       "Codigo de Identificación de países"
-Description: "Esta extensión incluye códigos de paises de origen"
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only CodeableConcept
-* value[x] ^short = "Código de País"
-* url 1..1 MS
-* valueCodeableConcept.coding 1..1 MS
-  * code 1..1 MS
-  * code from CodPais
-  * system 0..1 MS
-  * display 0..1 MS
-//* valueCodeableConcept.coding.system from CodPaises (extensible)
-
-
-
-Extension: SegundoApellido
-Id: SegundoApellido
-Title: "Segundo Apellido"
-Description: "Segundo Apellido"
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only string
-
-
 Extension: PeriodoFuncionamiento
 Id: PeriodoFuncionamiento
 Title: "Periodo Funcionamiento Establecimiento"
@@ -37,16 +10,6 @@ Description: "Periodo Funcionamiento Establecimiento"
   * start ^short = "Fecha de inicio de funcionamiento de la organizacion"
   * end 0..1 MS
   * end ^short = "Fecha de término de funcionamiento de la organizacion"                                             
-
-Extension: CodigoPais
-Id: CodigoPais
-Title: "Código de identificación de país"
-Description: "Extensión para el código de identificación de país"
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only CodeableConcept
-* value[x] ^short = "Código de identificación de país"
-* value[x] from https://hl7chile.cl/fhir/ig/clcore/ValueSet/CodPais (required)
 
 
 Extension: EstadoFuncionamiento
@@ -91,15 +54,6 @@ Description: "Ambito Funcionamiento"
     * code from VSAmbitoFuncionamiento (required)
     * display 0..1 MS
     * system 0..1 MS
-
-Extension: NombreVia
-Id: NombreVia
-Title: "Nombre de la Vía"
-Description: "Es la ubicación más específica de la dirección del establecimiento."
-* ^context.type = #element
-* ^context.expression = "Organization.address"
-* value[x] only string
-* value[x] ^short = "Nombre de la vía" 
 
 Extension: PertenenciaSNSS
 Id: PertenenciaSNSS
@@ -167,45 +121,17 @@ Description: "Modalidad de atención respecto al proceso de atención de las per
     * system 1..1 MS
 
 
-Extension: Seremi
-Id: Seremi
-Title: "SEREMI del cual depende la organizacion" 
-Description: "SEREMI del cual depende la organizacion"
+Extension: Dependencia
+Id: Dependencia
+Title: "Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)"
+Description: "Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)"
 * ^context.type = #element
 * ^context.expression = "PrestadorInstitucionalMinsal"
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
   * coding 1..1 MS
     * code 1..1 MS
-    * code from VSSeremi (required)
-    * display 0..1 MS
-    * system 1..1 MS
-
-Extension: ServiciosdeSalud
-Id: ServiciosdeSalud
-Title: "Servicio de Salud del cual depende la organizacion" 
-Description: "Servicio de Salud del cual depende la organizacion"
-* ^context.type = #element
-* ^context.expression = "PrestadorInstitucionalMinsal"
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSServiciosdeSalud (required)
-    * display 0..1 MS
-    * system 1..1 MS
-
-Extension: SeremiSS
-Id: SeremiSS
-Title: "Seremi o SS al cual depende la organizacion" 
-Description: "Seremi o SS al cual depende la organizacion"
-* ^context.type = #element
-* ^context.expression = "PrestadorInstitucionalMinsal"
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSSEREMISS (required)
+    * code from VSSeremiServiciosdeSalud (required)
     * display 0..1 MS
     * system 1..1 MS
 
@@ -251,7 +177,7 @@ Description: "Tipo Urgencia"
 Extension: ClasificacionSAPU
 Id: ClasificacionSAPU
 Title: "Clasificacion SAPU"
-Description: "ClasificacionSAPU"
+Description: "Clasificacion SAPU"
 * ^context.type = #element
 * ^context.expression = "PrestadorInstitucionalMinsal"
 * url MS

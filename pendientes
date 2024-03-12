@@ -1,0 +1,99 @@
+Hola Jorge, de acuerdo a lo revisado en esta reunión, envío las observaciones, para que por favor lo puedas corregir en la GI:
+
+CLprestador
+  Identifier.value 0..1 -> 1..1 ----OK
+  descripcion de los identifier.value 
+
+fechafunciona ----OK
+fechacese   ----OK
+  period tipo de dato ---- OK
+Fecha inicio, se debe corregir la descripción y el nombre ---- OK
+Todo lo relacionado al ámbito de ubicación geográfica, se debe incluir en el address CL ---OK
+En address CL, se debe incluir las coordenadas ---OK
+Código madre del establecimiento No es obligatorio ---OK
+
+
+Se deben agregar los siguientes campos que se solicitan en el Excel con el CMBD, pero que en la GI no estaban:
+
+Nivel de atención ---ok
+    1	Nivel Primario
+    2	Nivel Secundario 
+    3	Nivel Terciario
+    95	No aplica
+
+Nivel de complejidad
+    1	Baja Complejidad
+    2	Mediana Complejidad
+    3	Alta Complejidad
+    95	No Aplica
+
+Modalidad de atención
+    1	MAI Modalidad de Atención Institucional
+    2	MLE Modalidad de Atención Libre Elección 
+
+Respecto de los campos que tuvimos dudas ese día en la revisión:
+Estado de funcionamiento, debe ir en la GI, éste se encuentra en la planilla del CMBD del prestador institucional y en la planilla con la base de 
+establecimientos del DEIS. ---OK
+Dependencia administrativa, debe ir en la GI, éste se encuentra en la planilla del CMBD del prestador institucional y en la planilla con la base de 
+establecimientos del DEIS. ---OK
+Ámbito de funcionamiento, debe ir en la GI, éste se encuentra en la planilla del CMBD del prestador institucional y en la planilla con la base de 
+establecimientos del DEIS. ---OK
+Si tienes dudas de algún VS, puedes revisar planilla adjunta, ésta fue enviada por DEIS, justamente por la ambigüedad que tenían algunos campos al inicio.
+
+Saludos y muchas gracias.
+
+
+Estado de funcionamiento
+    1	Vigente en operación habitual
+    2	Vigente en operación parcial
+    3	Vigente en operación transitoria
+    4	Cerrado temporal
+    5	Cerrado definitivo
+    6	Otro
+
+    Dependencia administrativa
+    1	Servicio de Salud
+    2	Municipal
+    3	Privado
+    4	Corporación Municipal
+    5	Organización No Gubernamental (ONG)
+    6	Fuerzas Armadas de Orden y Seguridad
+    7	Gendarmería
+    8	Delegados
+    9	SEREMI de Salud
+    10	MINSAL
+    11	Ministerio de Justicia
+    12	Ministerio del Trabajo y Previsión Social 
+    13	Otra Institución 
+
+Ámbito de funcionamiento
+    1	Establecimiento de Salud 
+    2	Establecimiento No de Salud de Salud 
+    3	Establecimiento Medicina Legal
+    4	Unidad de Atención 
+    5	Programa de Atención
+    6	Otro
+
+
+
+* Extension para SS o SEREMI perteneciente 1..1 ---- OK (validar mejor opcion, separada o todo junto)
+* partOf 0..1 // dependencia jerárquica ---- OK
+* periodo de funcionamiento poner descripción de star y end --- ok
+* addresscl sacar del deis no mas --- ok
+* separar CaracterizacionPrestador --- ok
+* Clasificación servicio de atención primaria de urgencia (Clasificacion SAPU) : Corto/ Largo / verano (Extension) 0..1 //revisar vocabulario DEIS  ---- ok
+* Nivel de complejidad --- OK
+    * 1   Baja Complejidad
+    2   Mediana Complejidad
+    3   Alta Complejidad
+    95  No Aplica
+* Modalidad de atención OK
+    1   MAI Modalidad de Atención Institucional
+    2   MLE Modalidad de Atención Libre Elección 
+
+
+revisar addresscl
+
+
+* Crear vs para pertenenciaSNSS Pertenece/No Pertenece / No Aplica
+Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)
