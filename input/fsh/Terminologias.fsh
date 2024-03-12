@@ -1,5 +1,5 @@
-CodeSystem:  CSModalidadAte
-Id: CSModalidadAte
+CodeSystem:  CSModalidadAtencion
+Id: CSModalidadAtencion
 Title: "Modalidad atención prestador"
 Description: "Modalidad atención"
 
@@ -18,9 +18,8 @@ Description: "Modalidad atención"
 * #3 "Abierta y Cerrada"
 * #99 "No Aplica"
 
-
-ValueSet:   VSModalidadAte
-Id:  VSModalidadAte
+ValueSet:   VSModalidadAtencion
+Id:  VSModalidadAtencion
 Title: "Modalidad atención prestador"
 Description: "Modalidad atención prestador"
 
@@ -33,7 +32,7 @@ Description: "Modalidad atención prestador"
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSModalidadAte
+* codes from system CSModalidadAtencion
 
 CodeSystem:  CSTipoUrgencia
 Id: CSTipoUrgencia
@@ -50,9 +49,16 @@ Description: "Tipo de urgencia"
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #1 "Ambulatoria"
-* #2 "Hospitalaria"
-* #3 "Especializada"
+* #1 "Urgencia Ambulatoria SAPU"
+* #2 "Urgencia Ambulatoria SAR"
+* #3 "Urgencia Ambulatoria SUR"
+* #4 "Urgencia Ambulatoria CEAR"
+* #5 "Urgencia Ambulatoria Privada"
+* #6 "Urgencia Ambulatoria Especializada"
+* #7 "Urgencia Hospitalaria UEH"
+* #8 "Urgencia Hospitalaria Especializada"
+* #9 "Pendiente"
+* #95 "No Aplica"
 
 ValueSet:   VSTipoUrgencia
 Id: VSTipoUrgencia
@@ -69,7 +75,6 @@ Description: "Tipo de urgencia"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * codes from system CSTipoUrgencia
-
 
 CodeSystem:  CSNivelAtencion
 Id: CSNivelAtencion
@@ -91,7 +96,6 @@ Description: "Nivel de Atencion"
 * #3 "Nivel Terciario"
 * #95 "No aplica"
 
-
 ValueSet:   VSNivelAtencion
 Id: VSNivelAtencion
 Title: "Nivel de Atencion"
@@ -107,7 +111,6 @@ Description: "Nivel de Atencion"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * codes from system CSNivelAtencion
-
 
 CodeSystem:  CSTipoPrestador
 Id: CSTiposPrestador
@@ -623,8 +626,8 @@ Description: "Clasificacion SAPU"
 * #5 "Pendiente"
 * #95 "No Aplica"
 
-ValueSet: VSNivelComplejidadEstab
-Id: VSNivelComplejidadEstab
+ValueSet: VSNivelComplejidadEstablecimiento
+Id: VSNivelComplejidadEstablecimiento
 Title: "Nivel Complejidad Establecimiento"
 Description: "Nivel Complejidad Establecimiento"
 * ^experimental = false
@@ -636,10 +639,10 @@ Description: "Nivel Complejidad Establecimiento"
 * ^contact.telecom.value = "minsal@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSNivelComplejidadEstab
+* codes from system CSNivelComplejidadEstablecimiento
 
-CodeSystem: CSNivelComplejidadEstab
-Id: CSNivelComplejidadEstab
+CodeSystem: CSNivelComplejidadEstablecimiento
+Id: CSNivelComplejidadEstablecimiento
 Title: "Nivel Complejidad Establecimiento"
 Description: "Nivel Complejidad Establecimiento"
 * ^experimental = false
@@ -657,11 +660,10 @@ Description: "Nivel Complejidad Establecimiento"
 * #3 "Alta Complejidad"
 * #95 "No Aplica"
 
-
-ValueSet: VSModalidadAtencionFonasa
-Id: VSModalidadAtencionFonasa
-Title: "Modalidad Atencion Fonasa"
-Description: "Modalidad Atencion Fonasa"
+ValueSet: VSPertenenciaSNSS
+Id: VSPertenenciaSNSS
+Title: "PertenenciaSNSS"
+Description: "PertenenciaSNSS"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -671,12 +673,12 @@ Description: "Modalidad Atencion Fonasa"
 * ^contact.telecom.value = "minsal@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSModalidadAtencionFonasa
+* codes from system CSPertenenciaSNSS
 
-CodeSystem: CSModalidadAtencionFonasa
-Id: CSModalidadAtencionFonasa
-Title: "Modalidad Atencion Fonasa"
-Description: "Modalidad Atencion Fonasa"
+CodeSystem: CSPertenenciaSNSS
+Id: CSPertenenciaSNSS
+Title: "PertenenciaSNSS"
+Description: "PertenenciaSNSS"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -687,5 +689,6 @@ Description: "Modalidad Atencion Fonasa"
 * ^contact.telecom.value = "minsal@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #1 "MAI Modalidad de Atención Institucional"
-* #2 "MLE Modalidad de Atención Libre Elección"
+* #1 "Perteneciente"
+* #2 "No Perteneciente"
+* #95 "No Aplica"

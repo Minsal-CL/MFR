@@ -25,10 +25,13 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
   TipoPrestador named TipoPrestador 0..1 MS and
   Certificacion named Certificacion 1..1 MS and
   TipoUrgencia named TipoUrgencia 0..1 MS and
-  TieneServicioUrgencia named TieneServicioUrgencia 0..1 MS and
-  NivelAtencion named NivelAtencion 0..1 MS and  
+  TieneServicioUrgencia named TieneServicioUrgencia 1..1 MS and
+  NivelAtencion named NivelAtencion 0..1 MS and
+  ClasificacionSAPU named ClasificacionSAPU 0..1 MS and
   EstadoFuncionamiento named EstadoFuncionamiento 1..1 MS and
   DependenciaAdministrativa named DependenciaAdministrativa 1..1 MS and
+  ModalidadAtencion named ModalidadAtencion 1..1 MS and
+  NivelComplejidadEstablecimiento named NivelComplejidadEstablecimiento 1..1 MS and
   AmbitoFuncionamiento named AmbitoFuncionamiento 1..1 MS and
   Dependencia named Dependencia 1..1 MS
 

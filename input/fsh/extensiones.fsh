@@ -60,8 +60,13 @@ Id: PertenenciaSNSS
 Description: "Es un atributo o características  del establecimiento relacionado con la relación de jurisdicción  establecida con el Sistema  Nacional de Servicios de Salud. Los establecimientos públicos  forman parte de un Servicio de Salud,  por lo tanto se consideran Pertenecientes al Sistema Nacional de Servicios de Salud. Por otro lado, Los establecimientos privados, de las Fuerzas Armadas, de Orden y Seguridad tienen una jurisdicción diferente, por lo tanto serán considerados  No pertenecientes al Sistema Nacional de Servicios de Salud."
 * ^context.type = #element
 * ^context.expression = "Organization"
-* value[x] only boolean
-* value[x] ^short = "Valor dicotómico de pertenencia o no" 
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+  * coding 1..1 MS
+    * code 1..1 MS
+    * code from VSPertenenciaSNSS (required)
+    * display 0..1 MS
+    * system 0..1 MS
 
 Extension: TipoEstablecimiento
 Id: TipoEstablecimiento
@@ -106,8 +111,8 @@ Description: "Procedimiento mediante el cual, una tercera parte diferente e inde
     * system 0..1 MS
 
 
-Extension: ModalidadAte
-Id: ModalidadAte
+Extension: ModalidadAtencion
+Id: ModalidadAtencion
 Title: "Modalidad de Atención del Prestador"
 Description: "Modalidad de atención respecto al proceso de atención de las personas en el establecimiento de salud de atención general y/o especializada. Se diferencian entre: los que están habilitados para la atención ambulatoria - abierta o sin internación de la persona, es decir se atiende y vuelve a su lugar de origen y la atención hospitalaria - cerrada  o con  internación, cuando  la presona para recibir los cuidados requeridos debe permanecer en el recinto hospitalario, haciendo  uso  de una cama de dotación."
 * ^context.type = #element
@@ -116,7 +121,7 @@ Description: "Modalidad de atención respecto al proceso de atención de las per
 * valueCodeableConcept 1..1 MS
   * coding 1..1 MS
     * code 1..1 MS
-    * code from VSModalidadAte (required)
+    * code from VSModalidadAtencion (required)
     * display 0..1 MS
     * system 1..1 MS
 
@@ -189,8 +194,8 @@ Description: "Clasificacion SAPU"
     * display 0..1 MS
     * system 0..1 MS
 
-Extension: NivelComplejidadEstab
-Id: NivelComplejidadEstab
+Extension: NivelComplejidadEstablecimiento
+Id: NivelComplejidadEstablecimiento
 Title: "Nivel Complejidad Establecimiento"
 Description: "Nivel Complejidad Establecimiento"
 * ^context.type = #element
@@ -200,24 +205,6 @@ Description: "Nivel Complejidad Establecimiento"
 * valueCodeableConcept 1..1 MS
   * coding 1..1 MS
     * code 1..1 MS
-    * code from VSNivelComplejidadEstab (required)
+    * code from VSNivelComplejidadEstablecimiento (required)
     * display 0..1 MS
     * system 0..1 MS
-
-Extension: ModalidadAtencionFonasa
-Id: ModalidadAtencionFonasa
-Title: "Modalidad Atencion Fonasa"
-Description: "Modalidad Atencion Fonasa"
-* ^context.type = #element
-* ^context.expression = "PrestadorInstitucionalMinsal"
-* url MS
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
-  * coding 1..1 MS
-    * code 1..1 MS
-    * code from VSModalidadAtencionFonasa (required)
-    * display 0..1 MS
-    * system 0..1 MS
-
-
-

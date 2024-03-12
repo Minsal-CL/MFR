@@ -97,3 +97,13 @@ revisar addresscl
 
 * Crear vs para pertenenciaSNSS Pertenece/No Pertenece / No Aplica
 Nombre Dependencia Jerárquica (SEREMI / Servicio de Salud)
+
+
+
+Jorge, de acuerdo a la última revisión, quedaron aún cosas pendientes:
+Falta el VS de pertenencia SNSS
+Tiene Servicio de urgencia es obligatorio
+Tipo de Urgencia hay que corregir el VS
+Clasificación SAPU hay que agregarlo como extensión
+Nivel Complejidad Establecimiento
+modalidad de atencion
