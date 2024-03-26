@@ -72,7 +72,7 @@ Description: "Prestador Institucional definido para fines de requerimientos norm
   * ^short = "Nombre Oficial del Establecimiento"
 
 //* address only ClAddressMFR
-* address only Address or ClAddressMFR
+* address only ClAddressMFR
 * address 0..1 MS
 
 
